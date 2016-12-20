@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">PATTEO</string>
+    <string name="title_activity_maps">Mapa</string>
+
+    <string name="navigation_drawer_open">Abrir janela de navegação</string>
+    <string name="navigation_drawer_close">Fechar Janela de navegação</string>
+
+    <string name="action_settings">Configurações</string>
+    <string name="hello_world">Olá mundo!</string>
+
+    <string name="tab_words">Letras</string>
+    <string name="tab_numbers">Numeros</string>
+
+    <string name="favorites">Favoritos</string>
+    <string name="home">Home</string>
+
+    <string name="tab_restaurants">Restaurantes</string>
+    <string name="tab_categories">Categorias</string>
+    <string name="tab_featured">Destaques</string>
+    <string name="tab_search">Procurar</string>
+    <string name="tab_map">Mapa</string>
+    <string name="tab_gallery">Galeria</string>
+    <string name="galleries">Galerias</string>
+
+    <string name="sub_tab_details">Detalhes</string>
+    <string name="sub_tab_map">Mapa</string>
+    <string name="sub_tab_gallery">Galeria</string>
+
+
+    <string name="detail_food_rating">Classificar Comida</string>
+    <string name="detail_price_rating">Classificar Preço</string>
+    <string name="detail_working_hours">Horas de Trabalho</string>
+    <string name="detail_amenitites">amenidade</string>
+    <string name="hint_any_keywords">Palavra Passe</string>
+    <string name="keywords">Senhas</string>
+    <string name="category">Categoria</string>
+    <string name="price_rating_range">Classificação de Faixa de Preço</string>
+    <string name="food_rating_range">Classificação de Faixa de Alimentos</string>
+
+    <string name="select_category">Selecione a Categoria</string>
+    <string name="search">Procurar</string>
+    <string name="clear">Limpar</string>
+    <string name="no_results_found">Nenhum resultado encontrado.</string>
+    <string name="no_name"></string>
+    <string name="menu">Menu</string>
+    <string name="tap_back_again_to_exit">Por favor, aperte a tecla voltar novamente para sair do app.</string>
+
+    <string name="header_categories">Categorias</string>
+    <string name="ok">Ok</string>
+
+    <string name="permission_error">Erro de permissão</string>
+    <string name="permission_error_details_location">Permissão de localidade negada. Voce precisa ativar a localização para obter resultados precisos de restaurantes vizinhos.</string>
+    <string name="failed_data">Falha ao obter dados</string>
+
+    <string name="location_error">Erro de localização.</string>
+    <string name="gps_not_on">GPS está atualmente desligado. Por favor, ative-o em seu celulare em Configurações > Localização.</string>
+    <string name="categories">Categorias</string>
+
+    <string name="cannot_determine_location">Não foi possivel determinar sua localização.</string>
+    <string name="cannot_determine_direction">Falha ao obter a direção.</string>
+    <string name="select_one_restaurant">Por favor, selecione o restaurante.</string>
+    <string name="km">Km.</string>
+    <string name="loading_image">Carregando imagem</string>
+
+    <string name="restaurant_details">Detalhes do Restaurante</string>
+    <string name="resuls">Resultados</string>
+    <string name="settings">Configurações</string>
+
+
+    <string name="radius_nearby">Raio Vizinhos</string>
+    <string name="radius_nearby_msg">Digitar o Raio em Km.</string>
+    <string name="app_settings">Configurações do App</string>
+    <string name="max">Maximo</string>
+    <string name="pref_title_application_version">Versão da Aplicação</string>
+    <string name="title_activity_settings">Configurações</string>
+
+    <string name="go_to_settings">Configurações</string>
+    <string name="cancel">Cancelar</string>
+    <string name="all">Tudo</string>
+    <string name="location_error_not_turned_on">Sem dados para mostrar por que você recusou a requisição de localização.</string>
+    <string name="grant_permission_call">Você precisa conceder permissão para chamar.</string>
+</resources>

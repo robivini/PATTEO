@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E9D460</color>
+    <color name="colorPrimaryDark">#EB974E</color>
+    <color name="colorAccent">#F4B350</color>
+
+    <color name="colorAccentAlpha66">#EB9538</color>
+
+    <color name="theme_ads_bg_color">#303030</color>
+    <color name="colorTitleText">#ffffffff</color>
+
+    <color name="bg_white_color">#ffffff</color>
+
+    <color name="text_white_color">#ffffff</color>
+
+    <color name="slider_bg_label">#4D000000</color>
+
+    <color name="list_text_color">#7c7c7c</color>
+
+    <color name="bg_gray_color">#f0f0f0</color>
+
+    <color name="bg_color">#fff3f3</color>
+
+    <color name="edittext_border_color">#e5e5e5</color>
+</resources>
