@@ -21,7 +21,7 @@ public class Config {
     public static final String TESTING_DEVICE_HASH = "79AFFFA212DC44434958839999ADD123";
 
     // Set to true if you want to display ads in all views.
-    public static final boolean WILL_SHOW_ADS = true;
+    public static final boolean WILL_SHOW_ADS = false;
 
     // Max filter distance in kilometers
     public final static int MAX_RADIUS_IN_KM = 5000;
@@ -37,13 +37,13 @@ public class Config {
     public final static float MAP_INFO_WINDOW_X_OFFSET = 0.25f;
 
     // Map zoom level
-    public static int MAP_ZOOM_LEVEL = 14;
+    public static int MAP_ZOOM_LEVEL = 19;
 
     // Search Category for all selection
     public final static int CATEGORY_ALL = R.string.all;
 
     // Default restaurants to fetch to get initial data
-    public final static int DEFAULT_RESTAURANTS_COUNT_TO_FIND_DISTANCE = 20;
+    public final static int DEFAULT_RESTAURANTS_COUNT_TO_FIND_DISTANCE = 100;
 
     // DO NOT EDIT THIS
     public static String GET_DATA_URL = BASE_URL + "rest/get_data.php";
@@ -55,10 +55,10 @@ public class Config {
     public final static boolean SHOW_LOCATION_COORDINATES_LOG = true;
 
     // DO NOT EDIT THIS
-    public final static double DEBUG_LATITUDE = 37.332331;
+    public final static double DEBUG_LATITUDE = -23.5098031;
 
     // DO NOT EDIT THIS
-    public final static double DEBUG_LONGITUDE= -122.031219;
+    public final static double DEBUG_LONGITUDE= -46.19266970000002;
 
     // DO NOT EDIT THIS
     public final static boolean DEBUG_LOCATION = false;

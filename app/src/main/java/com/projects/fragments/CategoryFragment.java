@@ -64,6 +64,7 @@ public class CategoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewInflate = inflater.inflate(R.layout.fragment_list_swipe, null);
         return viewInflate;
+
     }
 
     @Override
