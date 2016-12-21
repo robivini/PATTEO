@@ -27,7 +27,7 @@ public class Config {
     public final static int MAX_RADIUS_IN_KM = 5000;
 
     // Change this url depending on the name of your web hosting.
-    public static String BASE_URL = "http://192.168.86.10/restaurant_finder/"; //comenta esse link que qualquer coisa a gente volta
+    public static String BASE_URL = "http://www.awmkt.com.br/app/"; //comenta esse link que qualquer coisa a gente volta
 
     // Server API KEY
     // This key must match in the Config.php file
