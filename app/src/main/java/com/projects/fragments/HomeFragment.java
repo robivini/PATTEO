@@ -298,6 +298,7 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
     }
 
     private void showList() {
+        categories.remove(0);
         MGRecyclerAdapter adapter = new MGRecyclerAdapter(categories.size(), R.layout.category_entry);
         adapter.setOnMGRecyclerAdapterListener(new MGRecyclerAdapter.OnMGRecyclerAdapterListener() {
 
