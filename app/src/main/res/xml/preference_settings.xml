@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="@string/app_settings">
-        <EditTextPreference
-            android:key="notifications_radius"
-            android:inputType="numberDecimal"
-            android:maxLength="10"
-            android:title="@string/radius_nearby" />
-    </PreferenceCategory>
-
     <PreferenceCategory android:title="Aplicação">
         <Preference
             android:key="application_version"

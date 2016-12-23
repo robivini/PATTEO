@@ -101,7 +101,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                     .displayImage(strUrl, imgViewPic, MainApplication.getDisplayImageOptionsInstance());
         }
 
-        checkFavoriteState();
+        //checkFavoriteState();
         showRefresh(false);
 
         MGTab tabDetails = (MGTab) findViewById(R.id.tabDetails);
@@ -163,7 +163,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    private void checkFavoriteState() {
+    /*private void checkFavoriteState() {
         Restaurant resFave = q.getFavoriteRestaurantsByRestaurantId(restaurant.getRestaurant_id());
         if (resFave == null) {
             isFave = false;
@@ -171,7 +171,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
             isFave = true;
         }
         invalidateOptionsMenu();
-    }
+    }*/
 
     private void addToFavorites() {
         q.insertFavorite(restaurant.getRestaurant_id());
@@ -182,7 +182,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         q.deleteFavorite(fave.favorite_id);
     }
 
-    @Override
+    /*@Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // toggle nav drawer on selecting action bar app icon/title
         // Handle action bar actions click
@@ -200,16 +200,16 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 finish();
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
         if (isFave)
             getMenuInflater().inflate(R.menu.menu_del_fave, menu);
         else
             getMenuInflater().inflate(R.menu.menu_add_fave, menu);
         return true;
-    }
+    }*/
 
     @Override
     public boolean onPrepareOptionsMenu(android.view.Menu menu) {

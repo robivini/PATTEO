@@ -14,24 +14,9 @@
                 android:title="@string/tab_categories" />
 
             <item
-                android:id="@+id/nav_favorites"
-                android:icon="@mipmap/ic_menu_fave"
-                android:title="@string/favorites" />
-
-            <item
                 android:id="@+id/nav_featured"
                 android:icon="@mipmap/ic_menu_featured"
                 android:title="@string/tab_featured" />
-
-            <item
-                android:id="@+id/nav_map"
-                android:icon="@mipmap/ic_menu_map"
-                android:title="@string/tab_map" />
-
-            <item
-                android:id="@+id/nav_search"
-                android:icon="@mipmap/ic_menu_search"
-                android:title="@string/search" />
 
             <item
                 android:id="@+id/nav_galleries"

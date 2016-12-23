@@ -210,7 +210,7 @@ public class MGSlider extends ViewPager implements OnItemClickListener {
     public void setSlideAtIndex(int index) {
     	this.setCurrentItem(index, true);
     	this.currentIndex = index;
-    	
+
     	if(mCallback != null)
     		mCallback.onItemMGSliderToView(this, index);
     }

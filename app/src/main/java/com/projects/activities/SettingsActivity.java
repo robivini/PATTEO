@@ -86,16 +86,16 @@ public class SettingsActivity extends PreferenceActivity {
     private void setupSimplePreferencesScreen() {
         addPreferencesFromResource(R.xml.preference_settings);
 
-        EditTextPreference prefRadius = (EditTextPreference)findPreference("notifications_radius");
+        //EditTextPreference prefRadius = (EditTextPreference)findPreference("notifications_radius");
 
-        float distance = UserAccessSession.getInstance(context).getFilterDistance();
-        String val = String.valueOf(Config.MAX_RADIUS_IN_KM);
-        if(distance > 0) {
-            val = String.valueOf(distance);
-        }
-        prefRadius.setText(val);
+        //float distance = UserAccessSession.getInstance(context).getFilterDistance();
+        //String val = String.valueOf(Config.MAX_RADIUS_IN_KM);
+        //if(distance > 0) {
+        //    val = String.valueOf(distance);
+        //}
+        //prefRadius.setText(val);
 
-        bindPreferenceSummaryToValue(findPreference("notifications_radius"));
+        //bindPreferenceSummaryToValue(findPreference("notifications_radius"));
         Preference app_version = findPreference("application_version");
         setPreferenceSummary(app_version, appVersion);
     }

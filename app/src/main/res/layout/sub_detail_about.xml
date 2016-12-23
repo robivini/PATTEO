@@ -65,89 +65,6 @@
                         android:layout_height="wrap_content" >
 
                         <ImageView
-                            android:id="@+id/ImageView01"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_detail_food_rating" />
-
-                        <TextView
-                            android:id="@+id/TextView01"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/dimen_5dp"
-                            android:text="@string/detail_food_rating"
-                            android:textSize="@dimen/text_size_about_details"
-                            android:textColor="@color/list_text_color"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <RatingBar
-                        android:id="@+id/ratingBarFood"
-                        style="@style/RatingBar"
-                        android:rating="5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dimen_20dp"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:numStars="5" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_20dp"
-                    android:orientation="vertical" >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
-
-                        <ImageView
-                            android:id="@+id/ImageView02"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_detail_price_rating" />
-
-                        <TextView
-                            android:id="@+id/TextView02"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/dimen_5dp"
-                            android:text="@string/detail_price_rating"
-                            android:textSize="@dimen/text_size_about_details"
-                            android:textColor="@color/list_text_color"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <RatingBar
-                        android:id="@+id/ratingBarPrice"
-                        style="@style/RatingBar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dimen_20dp"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:numStars="5" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_20dp"
-                    android:orientation="vertical" >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
-
-                        <ImageView
                             android:id="@+id/ImageView04"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -179,48 +96,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_20dp"
-                    android:orientation="vertical" >
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" >
-
-                        <ImageView
-                            android:id="@+id/ImageView03"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@mipmap/ic_detail_amenities" />
-
-                        <TextView
-                            android:id="@+id/TextView03"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/dimen_5dp"
-                            android:text="@string/detail_amenitites"
-                            android:textSize="@dimen/text_size_about_details"
-                            android:textColor="@color/list_text_color"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/tvAmenities"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dimen_20dp"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:text="@string/detail_price_rating"
-                        android:textColor="@color/list_text_color"
-                        android:textSize="@dimen/text_size_about_details" />
-
-                </LinearLayout>
-                
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

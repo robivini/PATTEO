@@ -149,22 +149,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             showFragment(new FeaturedFragment());
             setTitle(R.string.tab_featured);
         }
-        if (id == R.id.nav_favorites) {
+        /*if (id == R.id.nav_favorites) {
             showFragment(new FavoriteFragment());
             setTitle(R.string.favorites);
         }
         if (id == R.id.nav_map) {
             showFragment(new MapFragment());
             setTitle(R.string.tab_map);
-        }
+        }*/
         if (id == R.id.nav_galleries) {
             showFragment(new GalleryFragment());
             setTitle(R.string.galleries);
         }
-        if (id == R.id.nav_search) {
+        /*if (id == R.id.nav_search) {
             showFragment(new SearchFragment());
             setTitle(R.string.search);
-        }
+        }*/
         if (id == R.id.nav_settings) {
             i = new Intent( this, SettingsActivity.class);
             startActivity(i);

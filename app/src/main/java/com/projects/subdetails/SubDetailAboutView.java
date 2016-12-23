@@ -41,7 +41,7 @@ public class SubDetailAboutView implements OnClickListener {
 		
 		TextView tvAddress = (TextView) viewInflate.findViewById(R.id.tvAddress);
 		TextView tvWorkingHours = (TextView) viewInflate.findViewById(R.id.tvWorkingHours);
-		TextView tvAmenities = (TextView) viewInflate.findViewById(R.id.tvAmenities);
+		//TextView tvAmenities = (TextView) viewInflate.findViewById(R.id.tvAmenities);
 		TextView tvDescription = (TextView) viewInflate.findViewById(R.id.tvDescription);
 		
 		//RatingBar ratingBarFood = (RatingBar) viewInflate.findViewById(R.id.ratingBarFood);
@@ -51,12 +51,12 @@ public class SubDetailAboutView implements OnClickListener {
 		Spanned name = Html.fromHtml(res.getName());
 		Spanned address = Html.fromHtml(res.getAddress());
 		Spanned hours = Html.fromHtml(res.getHours());
-		Spanned amenities = Html.fromHtml(res.getAmenities());
+		//Spanned amenities = Html.fromHtml(res.getAmenities());
 		
 		tvTitle.setText(name);
 		tvAddress.setText(address);
 		tvWorkingHours.setText(hours);
-		tvAmenities.setText(amenities);
+		//tvAmenities.setText(amenities);
 		tvDescription.setText(desc);
 		
 		//ratingBarFood.setRating((float)res.getFood_rating());

@@ -3,6 +3,7 @@ package com.db;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.models.Category;
 import com.models.Favorite;
@@ -107,6 +108,7 @@ public class Queries {
 		ContentValues values = new ContentValues();
 		values.put("created_at", entry.getCreated_at());
 		values.put("photo_url", entry.getPhoto_url());
+		Log.i("", entry.getPhoto_url().toString());
 		values.put("thumb_url", entry.getThumb_url());
 		values.put("photo_id", entry.getPhoto_id());
 		values.put("restaurant_id", entry.getRestaurant_id());
@@ -140,6 +142,7 @@ public class Queries {
 	}
 	
 	public Category getCategoryByCategoryName(String category) {
+		Log.i("", "getCategoryByCategoryName");
 		Category entry = null;
 		String sql = String.format("SELECT * FROM categories WHERE category = '%s'", category);
 		ArrayList<Category> list = new ArrayList<Category>();
@@ -158,6 +161,7 @@ public class Queries {
 
 	public ArrayList<Category> getCategories() {
 		ArrayList<Category> list = new ArrayList<Category>();
+		Log.i("", "getCategory");
 		db = dbHelper.getReadableDatabase();
 		Cursor mCursor = db.rawQuery("SELECT * FROM categories ORDER BY category ASC", null);
 		mCursor.moveToFirst();
@@ -173,6 +177,7 @@ public class Queries {
 	
 	private ArrayList<Restaurant> getRestaurantsUsingSQL(String sql) {
 		ArrayList<Restaurant> list = new ArrayList<Restaurant>();
+		Log.i("", "getRestaurantsUsingSQL");
 		db = dbHelper.getReadableDatabase();
 		Cursor mCursor = db.rawQuery(sql, null);
 		mCursor.moveToFirst();
@@ -187,17 +192,20 @@ public class Queries {
 	}
 
 	public ArrayList<Restaurant> getFeaturedRestaurants() {
+		Log.i("", "getFeaturedRestaurants");
 		String sql = String.format("SELECT * FROM restaurants WHERE featured = 1 ORDER BY name ASC");
 		ArrayList<Restaurant> list = getRestaurantsUsingSQL(sql);
 		return list;
 	}
 
 	public ArrayList<Restaurant> getRestaurants() {
+		Log.i("", "getRestaurants");
 		ArrayList<Restaurant> list = getRestaurantsUsingSQL("SELECT * FROM restaurants ORDER BY name ASC");
 		return list;
 	}
 	
 	public ArrayList<Restaurant> getRestaurantsByCategoryId(int categoryId) {
+		Log.i("", "getRestaurantsByCategoryId");
 		String sql = String.format("SELECT * FROM restaurants WHERE category_id = %d ORDER BY name ASC", categoryId);
 		ArrayList<Restaurant> list = getRestaurantsUsingSQL(sql);
 		return list;
@@ -208,8 +216,7 @@ public class Queries {
 		ArrayList<Restaurant> list = getRestaurantsUsingSQL(sql);
 		return list.size() == 0 ? null : list.get(0);
 	}
-	
-	
+
 	private ArrayList<Photo> getPhotosBySQL(String sql) {
 		ArrayList<Photo> list = new ArrayList<Photo>();
 		db = dbHelper.getReadableDatabase();
@@ -226,6 +233,7 @@ public class Queries {
 	}
 
 	public ArrayList<Photo> getPhotos() {
+
 		return getPhotosBySQL("SELECT * FROM photos");
 	}
 	
