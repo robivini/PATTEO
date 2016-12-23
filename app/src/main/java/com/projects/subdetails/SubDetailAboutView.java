@@ -44,8 +44,8 @@ public class SubDetailAboutView implements OnClickListener {
 		TextView tvAmenities = (TextView) viewInflate.findViewById(R.id.tvAmenities);
 		TextView tvDescription = (TextView) viewInflate.findViewById(R.id.tvDescription);
 		
-		RatingBar ratingBarFood = (RatingBar) viewInflate.findViewById(R.id.ratingBarFood);
-		RatingBar ratingBarPrice = (RatingBar) viewInflate.findViewById(R.id.ratingBarPrice);
+		//RatingBar ratingBarFood = (RatingBar) viewInflate.findViewById(R.id.ratingBarFood);
+		//RatingBar ratingBarPrice = (RatingBar) viewInflate.findViewById(R.id.ratingBarPrice);
 		
 		Spanned desc = Html.fromHtml(res.getDesc1());
 		Spanned name = Html.fromHtml(res.getName());
@@ -59,11 +59,11 @@ public class SubDetailAboutView implements OnClickListener {
 		tvAmenities.setText(amenities);
 		tvDescription.setText(desc);
 		
-		ratingBarFood.setRating((float)res.getFood_rating());
-		ratingBarPrice.setRating((float)res.getPrice_rating());
+		//ratingBarFood.setRating((float)res.getFood_rating());
+		//ratingBarPrice.setRating((float)res.getPrice_rating());
 		
-		ratingBarFood.setFocusable(false);
-		ratingBarFood.setOnTouchListener(new OnTouchListener() {
+		/*ratingBarFood.setFocusable(false);
+		//ratingBarFood.setOnTouchListener(new OnTouchListener() {
 
 			@Override
 			public boolean onTouch(View arg0, MotionEvent arg1) {
@@ -80,7 +80,7 @@ public class SubDetailAboutView implements OnClickListener {
 				// TODO Auto-generated method stub
 				return true;
 			}
-	    });
+	    });*/
 
 		ImageView imgViewCall = (ImageView) viewInflate.findViewById(R.id.imgViewCall);
 		imgViewCall.setOnClickListener(this);

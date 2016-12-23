@@ -15,6 +15,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -43,9 +44,9 @@ import com.projects.subdetails.SubDetailMapView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class DetailActivity extends AppCompatActivity implements  View.OnClickListener {
+public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
 
-	public Queries q;
+    public Queries q;
     Restaurant restaurant;
     SubDetailAboutView aboutView = null;
     SubDetailMapView mapView = null;
@@ -53,19 +54,19 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
     boolean isFave = false;
     SwipeRefreshLayout swipeRefresh;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
-		setContentView(R.layout.fragment_details);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+        setContentView(R.layout.fragment_details);
         setTitle(R.string.restaurant_details);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-		q = MainApplication.getQueriesInstance(this);
+        q = MainApplication.getQueriesInstance(this);
         swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh);
         swipeRefresh.setClickable(false);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            swipeRefresh.setProgressViewOffset(false, 0,100);
+            swipeRefresh.setProgressViewOffset(false, 0, 100);
         }
 
         swipeRefresh.setColorSchemeResources(
@@ -75,13 +76,13 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
                 android.R.color.holo_red_light);
 
         showRefresh(true);
-        restaurant = (Restaurant)this.getIntent().getSerializableExtra("restaurant");
+        restaurant = (Restaurant) this.getIntent().getSerializableExtra("restaurant");
 
-        if(restaurant != null && restaurant.getName() != null && restaurant.getName().length() > 0)
+        if (restaurant != null && restaurant.getName() != null && restaurant.getName().length() > 0)
             setTitle(restaurant.getName());
 
         updateView();
-	}
+    }
 
     public void showRefresh(boolean show) {
         swipeRefresh.setRefreshing(show);
@@ -91,9 +92,9 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
     public void updateView() {
         ImageView imgViewPic = (ImageView) findViewById(R.id.imgViewPic);
         Photo p = q.getPhotoByRestaurantId(restaurant.getRestaurant_id());
-        if(p != null) {
+        if (p != null) {
             String strUrl = p.getPhoto_url();
-            if(!strUrl.contains("http")) {
+            if (!strUrl.contains("http")) {
                 strUrl = "http://" + strUrl;
             }
             MainApplication.getImageLoaderInstance(this)
@@ -133,23 +134,21 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
     private void showDetailFragment(int pos) {
         FrameLayout frameDetails = (FrameLayout) findViewById(R.id.containerDetails);
         frameDetails.removeAllViews();
-        if(pos == 0) {
-            if(aboutView == null) {
+        if (pos == 0) {
+            if (aboutView == null) {
                 aboutView = new SubDetailAboutView(this);
                 aboutView.setDetail(restaurant);
             }
             frameDetails.addView(aboutView.getView());
-        }
-        else if(pos == 1) {
-            if(mapView == null) {
+        } else if (pos == 1) {
+            if (mapView == null) {
                 mapView = new SubDetailMapView(this);
                 mapView.loadMap(restaurant);
 
             }
             frameDetails.addView(mapView.getView());
-        }
-        else if(pos == 2) {
-            if(galleryView == null) {
+        } else if (pos == 2) {
+            if (galleryView == null) {
                 galleryView = new SubDetailGalleryView(this);
                 galleryView.showGalleries(restaurant);
             }
@@ -160,16 +159,15 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
-        switch(v.getId()) {
+        switch (v.getId()) {
         }
     }
 
     private void checkFavoriteState() {
         Restaurant resFave = q.getFavoriteRestaurantsByRestaurantId(restaurant.getRestaurant_id());
-        if(resFave == null) {
+        if (resFave == null) {
             isFave = false;
-        }
-        else {
+        } else {
             isFave = true;
         }
         invalidateOptionsMenu();
@@ -183,31 +181,30 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
         Favorite fave = q.getFavoriteByRestaurantId(restaurant.getRestaurant_id());
         q.deleteFavorite(fave.favorite_id);
     }
-	
-	@Override
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // toggle nav drawer on selecting action bar app icon/title
         // Handle action bar actions click
         switch (item.getItemId()) {
             case R.id.addFave:
                 Restaurant resFave = q.getFavoriteRestaurantsByRestaurantId(restaurant.getRestaurant_id());
-                if(resFave == null) {
+                if (resFave == null) {
                     addToFavorites();
-                }
-                else {
+                } else {
                     deleteFavorite();
                 }
                 checkFavoriteState();
                 return true;
-	        default:
-	        	finish();	
-	            return super.onOptionsItemSelected(item);
+            default:
+                finish();
+                return super.onOptionsItemSelected(item);
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {
-        if(isFave)
+        if (isFave)
             getMenuInflater().inflate(R.menu.menu_del_fave, menu);
         else
             getMenuInflater().inflate(R.menu.menu_add_fave, menu);
@@ -220,16 +217,17 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
         return super.onPrepareOptionsMenu(menu);
     }
 
-	@Override
-	protected void onDestroy() {
-		// TODO Auto-generated method stub
-		super.onDestroy();
-	}
+    @Override
+    protected void onDestroy() {
+        // TODO Auto-generated method stub
+        super.onDestroy();
+    }
 
     public void permissionCall(String phoneNo) {
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             int permissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
+            Log.i("", "Entrou no if");
             if(permissionCheck == PackageManager.PERMISSION_DENIED) {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CALL_PHONE)) {
                     // Show an expanation to the user *asynchronously* -- don't block
@@ -245,16 +243,17 @@ public class DetailActivity extends AppCompatActivity implements  View.OnClickLi
                     // result of the request.
                 }
             }
-        }
+        }*/
 
-        if(phoneNo == null || phoneNo.length() == 0) {
+        if (phoneNo == null || phoneNo.length() == 0) {
             Toast.makeText(this, "No phone number provided.", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        String uri = "tel:" + phoneNo.trim() ;
-        Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse(uri));
+        String uri = "tel:" + phoneNo.trim();
+        Log.i("", uri);
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse(String.valueOf(Uri.parse(uri))));
         startActivity(intent);
     }
 

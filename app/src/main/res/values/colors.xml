@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#E9D460</color>
-    <color name="colorPrimaryDark">#F9BF3B</color>
-    <color name="colorAccent">#F4B350</color>
+    <color name="colorPrimary">#8B7B3C</color>
+    <color name="colorPrimaryDark">#706433</color>
+    <color name="colorAccent">#8B7B3C</color>
 
-    <color name="colorAccentAlpha66">#EB9538</color>
+    <color name="colorAccentAlpha66">#706433</color>
 
     <color name="theme_ads_bg_color">#303030</color>
     <color name="colorTitleText">#ffffffff</color>
@@ -19,7 +19,7 @@
 
     <color name="bg_gray_color">#f0f0f0</color>
 
-    <color name="bg_color">#fff3f3</color>
+    <color name="bg_color">#FCFAF2</color>
 
     <color name="edittext_border_color">#e5e5e5</color>
 </resources>
