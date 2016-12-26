@@ -127,7 +127,7 @@ public class RestaurantActivity extends AppCompatActivity {
             @Override
             public void onMGRecyclerAdapterCreated(MGRecyclerAdapter adapter, MGRecyclerAdapter.ViewHolder v, int position) {
                 final Restaurant restaurant = restaurants.get(position);
-                Photo p = q.getPhotoByRestaurantId(restaurant.getRestaurant_id());
+                Photo p = q.getOnePhotoByRestaurantId(restaurant.getRestaurant_id());
                 Favorite fave = q.getFavoriteByRestaurantId(restaurant.getRestaurant_id());
 
                 MGImageView imgViewThumb = (MGImageView) v.view.findViewById(R.id.imgViewThumb);

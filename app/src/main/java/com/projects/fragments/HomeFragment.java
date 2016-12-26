@@ -197,6 +197,7 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                         });
                     }
                     categories = q.getCategories();
+                    Log.i("", categories.toString());
                 }
 
                 createSlider();
@@ -342,7 +343,7 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                                                    int position) {
                 // TODO Auto-generated method stub
                 final Restaurant entry = restaurants.get(position);
-                Photo p = q.getPhotoByRestaurantId(entry.getRestaurant_id());
+                Photo p = q.getOnePhotoByRestaurantId(entry.getRestaurant_id());
                 ImageView imageViewSlider = (ImageView) v.findViewById(R.id.imageViewSlider);
                 if(p != null) {
                     MainApplication.getImageLoaderInstance(getActivity())

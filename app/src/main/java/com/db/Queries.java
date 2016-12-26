@@ -108,10 +108,10 @@ public class Queries {
 		ContentValues values = new ContentValues();
 		values.put("created_at", entry.getCreated_at());
 		values.put("photo_url", entry.getPhoto_url());
-		Log.i("", entry.getPhoto_url().toString());
 		values.put("thumb_url", entry.getThumb_url());
 		values.put("photo_id", entry.getPhoto_id());
 		values.put("restaurant_id", entry.getRestaurant_id());
+		Log.i("KKKK", entry.getPhoto_url());
         db.insert("photos", null, values);
 	}
 	
@@ -257,11 +257,29 @@ public class Queries {
 		if (!mCursor.isAfterLast()) {
 			do {
 				entry = formatPhoto(mCursor);
+				Log.i("KKKKKKKKK", entry.getPhoto_url());
 			} while (mCursor.moveToNext());
 		}
 		mCursor.close();
 		return entry;
 	}
+
+	public Photo getOnePhotoByRestaurantId(int restaurantId) {
+		Photo entry = null;
+		String sql = String.format("SELECT * FROM photos WHERE restaurant_id = %d", restaurantId);
+		db = dbHelper.getReadableDatabase();
+		Cursor mCursor = db.rawQuery(sql , null);
+		mCursor.moveToFirst();
+		if (!mCursor.isAfterLast()) {
+
+				entry = formatPhoto(mCursor);
+				Log.i("KKKKKKKKK", entry.getPhoto_url());
+
+		}
+		mCursor.close();
+		return entry;
+	}
+
 	
 	public ArrayList<Favorite> getFavorites() {
 		ArrayList<Favorite> list = new ArrayList<Favorite>();

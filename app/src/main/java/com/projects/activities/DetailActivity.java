@@ -91,7 +91,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
     public void updateView() {
         ImageView imgViewPic = (ImageView) findViewById(R.id.imgViewPic);
-        Photo p = q.getPhotoByRestaurantId(restaurant.getRestaurant_id());
+        Photo p = q.getOnePhotoByRestaurantId(restaurant.getRestaurant_id());
         if (p != null) {
             String strUrl = p.getPhoto_url();
             if (!strUrl.contains("http")) {
