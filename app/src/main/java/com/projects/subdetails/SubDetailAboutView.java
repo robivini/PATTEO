@@ -6,19 +6,16 @@ import android.support.v4.app.FragmentActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.config.UIConfig;
 import com.models.Restaurant;
 import com.projects.activities.DetailActivity;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 public class SubDetailAboutView implements OnClickListener {
 

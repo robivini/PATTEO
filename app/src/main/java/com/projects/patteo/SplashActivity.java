@@ -1,4 +1,4 @@
-package com.projects.restaurantfinder;
+package com.projects.patteo;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;

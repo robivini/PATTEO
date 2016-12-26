@@ -20,7 +20,7 @@ import com.config.UIConfig;
 import com.davemorrissey.labs.subscaleview.ImageSource;
 import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import com.models.Photo;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.NetworkPolicy;

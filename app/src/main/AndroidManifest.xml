@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.projects.restaurantfinder">
+    package="com.projects.patteo">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -36,7 +36,7 @@
                 android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".SplashActivity"
+            android:name="com.projects.patteo.SplashActivity"
             android:theme="@style/SplashTheme"
             android:label="@string/app_name">
             <intent-filter>
@@ -47,7 +47,7 @@
         </activity>
 
         <activity
-            android:name="com.projects.restaurantfinder.MainActivity"
+            android:name="com.projects.patteo.MainActivity"
             android:theme="@style/MainTheme"
             android:label="@string/app_name"/>
 
@@ -55,6 +55,7 @@
         <activity android:name="com.projects.activities.ImageViewerActivity" android:label="@string/app_name"/>
         <activity android:name="com.projects.activities.RestaurantActivity" android:label="@string/app_name"/>
         <activity android:name="com.projects.activities.SettingsActivity" android:label="@string/app_name"/>
+        <activity android:name="com.projects.fragments.AnuncioFragment" android:label="Anúncie!"/>
     </application>
 
 </manifest>

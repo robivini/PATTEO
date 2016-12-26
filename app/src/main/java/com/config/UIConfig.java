@@ -1,6 +1,6 @@
 package com.config;
 
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 /**
  * Created by mg on 20/10/16.

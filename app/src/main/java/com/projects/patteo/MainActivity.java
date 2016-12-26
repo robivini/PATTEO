@@ -1,22 +1,14 @@
-package com.projects.restaurantfinder;
+package com.projects.patteo;
 
-import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -34,17 +26,14 @@ import com.config.Config;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.libraries.location.MGLocationManager;
 import com.libraries.utilities.MGUtilities;
 
 import com.projects.activities.SettingsActivity;
+import com.projects.fragments.AnuncioFragment;
 import com.projects.fragments.CategoryFragment;
-import com.projects.fragments.FavoriteFragment;
 import com.projects.fragments.FeaturedFragment;
 import com.projects.fragments.GalleryFragment;
 import com.projects.fragments.HomeFragment;
-import com.projects.fragments.MapFragment;
-import com.projects.fragments.SearchFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -168,6 +157,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.nav_settings) {
             i = new Intent( this, SettingsActivity.class);
             startActivity(i);
+        }
+        if (id == R.id.nav_anuncio) {
+            showFragment(new AnuncioFragment(this));
+            setTitle(R.string.tab_anuncio);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

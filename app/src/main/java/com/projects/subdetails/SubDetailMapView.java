@@ -2,7 +2,6 @@ package com.projects.subdetails;
 
 
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,13 +13,11 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.libraries.directions.GMapV2Direction;
 import com.models.Restaurant;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 public class SubDetailMapView implements OnMapReadyCallback {
 

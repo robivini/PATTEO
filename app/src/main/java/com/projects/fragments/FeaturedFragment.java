@@ -30,8 +30,8 @@ import com.models.Favorite;
 import com.models.Photo;
 import com.models.Restaurant;
 import com.projects.activities.DetailActivity;
-import com.projects.restaurantfinder.MainActivity;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.MainActivity;
+import com.projects.patteo.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

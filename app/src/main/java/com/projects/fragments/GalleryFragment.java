@@ -6,28 +6,23 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.util.Log;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.GridView;
+
 import com.application.MainApplication;
-import com.config.Config;
 import com.config.UIConfig;
 import com.db.Queries;
 import com.etsy.android.grid.StaggeredGridView;
 import com.libraries.adapters.MGListAdapter;
 import com.libraries.adapters.MGListAdapter.OnMGListAdapterAdapterListener;
-import com.libraries.imageview.MGImageView;
 import com.libraries.imageview.StaggeredImageView;
 import com.models.Photo;
 import com.projects.activities.ImageViewerActivity;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class GalleryFragment extends Fragment implements OnItemClickListener {
 

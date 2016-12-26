@@ -29,7 +29,7 @@ import android.widget.ListView;
 import com.config.Config;
 import com.libraries.usersession.UserAccessSession;
 import com.libraries.utilities.MGUtilities;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 
 public class SettingsActivity extends PreferenceActivity {

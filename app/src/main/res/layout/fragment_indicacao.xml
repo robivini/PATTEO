@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/header_logo"
+        android:id="@+id/imageView7"
+        android:background="@color/colorAccent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_weight="0.42"
+        android:paddingBottom="15dp" />
+
+    <TextView
+        android:text="@string/contato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtContato"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.10">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:text="@string/tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTel"
+                android:textSize="@dimen/nav_header_vertical_spacing"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txttel1"
+                android:textSize="@dimen/fab_margin"
+                android:padding="5dp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="@string/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtEmail"
+                android:textSize="@dimen/fab_margin"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtemail1"
+                android:textSize="@dimen/fab_margin"
+                android:padding="5dp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_marginLeft="15dp" />
+
+            <TextView
+                android:text="@string/site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSite"
+                android:textSize="@dimen/fab_margin"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtweb1"
+                android:textSize="@dimen/fab_margin"
+                android:padding="5dp"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:layout_marginLeft="15dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

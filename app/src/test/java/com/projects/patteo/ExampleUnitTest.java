@@ -1,4 +1,4 @@
-package com.projects.restaurantfinder;
+package com.projects.patteo;
 
 import org.junit.Test;
 

@@ -20,14 +20,12 @@ import android.widget.RatingBar;
 import com.application.MainApplication;
 import com.config.Config;
 import com.db.Queries;
-import com.libraries.asynctask.MGAsyncTask;
-import com.libraries.asynctask.MGAsyncTask.OnMGAsyncTaskListener;
 import com.libraries.asynctask.MGAsyncTaskNoDialog;
 import com.libraries.utilities.MGUtilities;
 import com.models.Category;
 import com.models.Restaurant;
 import com.projects.activities.RestaurantActivity;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 import java.util.ArrayList;
 

@@ -17,7 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

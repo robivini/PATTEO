@@ -1,24 +1,16 @@
 package com.projects.activities;
 
-import android.Manifest;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,22 +19,16 @@ import android.widget.Toast;
 import com.application.MainApplication;
 import com.config.Config;
 import com.config.UIConfig;
-import com.db.DbHelper;
 import com.db.Queries;
-import com.libraries.segment.control.MGSegmentControl;
 import com.libraries.tab.MGTab;
 import com.libraries.utilities.MGUtilities;
 import com.models.Favorite;
 import com.models.Photo;
 import com.models.Restaurant;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 import com.projects.subdetails.SubDetailAboutView;
 import com.projects.subdetails.SubDetailGalleryView;
 import com.projects.subdetails.SubDetailMapView;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class DetailActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -182,12 +168,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         q.deleteFavorite(fave.favorite_id);
     }
 
-    /*@Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // toggle nav drawer on selecting action bar app icon/title
         // Handle action bar actions click
         switch (item.getItemId()) {
-            case R.id.addFave:
+            /*case R.id.addFave:
                 Restaurant resFave = q.getFavoriteRestaurantsByRestaurantId(restaurant.getRestaurant_id());
                 if (resFave == null) {
                     addToFavorites();
@@ -195,12 +181,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                     deleteFavorite();
                 }
                 checkFavoriteState();
-                return true;
+                return true;*/
             default:
                 finish();
                 return super.onOptionsItemSelected(item);
         }
-    }*/
+    }
 
     /*@Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {

@@ -22,6 +22,7 @@
     <string name="tab_map">Mapa</string>
     <string name="tab_gallery">Galeria</string>
     <string name="galleries">Galerias</string>
+    <string name="tab_anuncio">Anuncie!</string>
 
     <string name="sub_tab_details">Detalhes</string>
     <string name="sub_tab_map">Mapa</string>
@@ -80,4 +81,8 @@
     <string name="all">Tudo</string>
     <string name="location_error_not_turned_on">Sem dados para mostrar por que você recusou a requisição de localização.</string>
     <string name="grant_permission_call">Você precisa conceder permissão para chamar.</string>
+    <string name="contato">Contato</string>
+    <string name="site">Website:</string>
+    <string name="email">E-mail:</string>
+    <string name="tel">Telefone:</string>
 </resources>

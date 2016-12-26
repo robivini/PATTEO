@@ -2,7 +2,6 @@ package com.projects.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,36 +15,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.application.MainApplication;
 import com.config.Config;
-import com.config.UIConfig;
 import com.db.Queries;
 import com.libraries.adapters.MGRecyclerAdapter;
 import com.libraries.asynctask.MGAsyncTaskNoDialog;
 import com.libraries.dataparser.DataParser;
-import com.libraries.slider.MGSlider;
-import com.libraries.slider.MGSlider.OnMGSliderListener;
-import com.libraries.slider.MGSliderAdapter;
-import com.libraries.slider.MGSliderAdapter.OnMGSliderAdapterListener;
-import com.libraries.usersession.UserAccessSession;
 import com.libraries.utilities.MGUtilities;
 import com.models.Category;
 import com.models.Data;
-import com.models.Photo;
-import com.models.Restaurant;
 import com.projects.activities.RestaurantActivity;
-import com.projects.restaurantfinder.MainActivity;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class CategoryFragment extends Fragment {
 
@@ -185,9 +170,8 @@ public class CategoryFragment extends Fragment {
     }
 
     private void showList() {
-        categories.remove(5);
+        //categories.remove(5);
         MGRecyclerAdapter adapter = new MGRecyclerAdapter(categories.size(), R.layout.category_entry);
-        Log.i("CATE", categories.toString());
         adapter.setOnMGRecyclerAdapterListener(new MGRecyclerAdapter.OnMGRecyclerAdapterListener() {
 
             @Override

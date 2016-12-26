@@ -152,6 +152,7 @@ public class Queries {
 		if (!mCursor.isAfterLast()) {
 			do {
 				entry = formatCategory(mCursor);
+				Log.i("OOOOOOO", entry.getCategory());
 				list.add(entry);
 			} while (mCursor.moveToNext());
 		}
@@ -161,14 +162,18 @@ public class Queries {
 
 	public ArrayList<Category> getCategories() {
 		ArrayList<Category> list = new ArrayList<Category>();
-		Log.i("", "getCategory");
 		db = dbHelper.getReadableDatabase();
 		Cursor mCursor = db.rawQuery("SELECT * FROM categories ORDER BY category ASC", null);
 		mCursor.moveToFirst();
 		if (!mCursor.isAfterLast()) {
 			do {
 				Category entry = formatCategory(mCursor);
-				list.add(entry);
+				if(entry.getCategory().equalsIgnoreCase("PATTEO")){
+
+				} else {
+					list.add(entry);
+				}
+
 			} while (mCursor.moveToNext());
 		}
 		mCursor.close();
@@ -177,7 +182,6 @@ public class Queries {
 	
 	private ArrayList<Restaurant> getRestaurantsUsingSQL(String sql) {
 		ArrayList<Restaurant> list = new ArrayList<Restaurant>();
-		Log.i("", "getRestaurantsUsingSQL");
 		db = dbHelper.getReadableDatabase();
 		Cursor mCursor = db.rawQuery(sql, null);
 		mCursor.moveToFirst();
@@ -200,7 +204,7 @@ public class Queries {
 
 	public ArrayList<Restaurant> getRestaurants() {
 		Log.i("", "getRestaurants");
-		ArrayList<Restaurant> list = getRestaurantsUsingSQL("SELECT * FROM restaurants ORDER BY name ASC");
+		ArrayList<Restaurant> list = getRestaurantsUsingSQL("SELECT * FROM restaurants");
 		return list;
 	}
 	
@@ -257,7 +261,6 @@ public class Queries {
 		if (!mCursor.isAfterLast()) {
 			do {
 				entry = formatPhoto(mCursor);
-				Log.i("KKKKKKKKK", entry.getPhoto_url());
 			} while (mCursor.moveToNext());
 		}
 		mCursor.close();
@@ -266,15 +269,13 @@ public class Queries {
 
 	public Photo getOnePhotoByRestaurantId(int restaurantId) {
 		Photo entry = null;
-		String sql = String.format("SELECT * FROM photos WHERE restaurant_id = %d", restaurantId);
+		String sql = String.format("SELECT * FROM photos WHERE restaurant_id = %d ORDER BY restaurant_id ASC", restaurantId);
 		db = dbHelper.getReadableDatabase();
 		Cursor mCursor = db.rawQuery(sql , null);
 		mCursor.moveToFirst();
 		if (!mCursor.isAfterLast()) {
 
 				entry = formatPhoto(mCursor);
-				Log.i("KKKKKKKKK", entry.getPhoto_url());
-
 		}
 		mCursor.close();
 		return entry;

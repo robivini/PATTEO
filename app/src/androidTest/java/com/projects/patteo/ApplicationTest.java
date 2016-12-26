@@ -1,4 +1,4 @@
-package com.projects.restaurantfinder;
+package com.projects.patteo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

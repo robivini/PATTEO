@@ -2,9 +2,6 @@ package com.projects.activities;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -13,10 +10,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.Spanned;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,21 +22,15 @@ import com.db.Queries;
 import com.libraries.adapters.MGRecyclerAdapter;
 import com.libraries.asynctask.MGAsyncTaskNoDialog;
 import com.libraries.imageview.MGImageView;
-import com.libraries.segment.control.MGSegmentControl;
 import com.libraries.utilities.MGUtilities;
 import com.models.Category;
 import com.models.Favorite;
 import com.models.Photo;
 import com.models.Restaurant;
-import com.projects.restaurantfinder.MainActivity;
-import com.projects.restaurantfinder.R;
-import com.projects.subdetails.SubDetailAboutView;
-import com.projects.subdetails.SubDetailGalleryView;
-import com.projects.subdetails.SubDetailMapView;
+import com.projects.patteo.MainActivity;
+import com.projects.patteo.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class RestaurantActivity extends AppCompatActivity {
 

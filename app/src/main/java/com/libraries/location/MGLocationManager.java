@@ -7,16 +7,10 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
-
-import com.application.MainApplication;
-import com.config.Config;
-import com.libraries.utilities.MGUtilities;
-import com.projects.restaurantfinder.R;
 
 /**
  * Created by mg on 24/10/16.

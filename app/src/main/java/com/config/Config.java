@@ -1,6 +1,6 @@
 package com.config;
 
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 /**
  * Created by mg on 20/10/16.
@@ -43,7 +43,7 @@ public class Config {
     public final static int CATEGORY_ALL = R.string.all;
 
     // Default restaurants to fetch to get initial data
-    public final static int DEFAULT_RESTAURANTS_COUNT_TO_FIND_DISTANCE = 100;
+    public final static int DEFAULT_RESTAURANTS_COUNT_TO_FIND_DISTANCE = 500;
 
     // DO NOT EDIT THIS
     public static String GET_DATA_URL = BASE_URL + "rest/get_data.php";

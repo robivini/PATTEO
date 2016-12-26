@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 
 import com.etsy.android.grid.util.DynamicHeightImageView;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 public class StaggeredImageView extends DynamicHeightImageView {
 

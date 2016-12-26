@@ -18,7 +18,7 @@ import com.models.Photo;
 import com.models.Restaurant;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.projects.activities.ImageViewerActivity;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 import java.util.ArrayList;
 
 public class SubDetailGalleryView implements OnItemClickListener {

@@ -30,11 +30,9 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.libraries.location.MGLocationManager;
 import com.libraries.usersession.UserAccessSession;
-import com.libraries.utilities.MGUtilities;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.projects.restaurantfinder.R;
 
 import java.io.IOException;
 import java.security.MessageDigest;

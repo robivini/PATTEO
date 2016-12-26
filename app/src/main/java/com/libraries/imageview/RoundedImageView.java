@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.R;
 
 public class RoundedImageView extends ImageView {
 

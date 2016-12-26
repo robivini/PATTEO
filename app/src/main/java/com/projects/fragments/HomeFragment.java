@@ -1,7 +1,6 @@
 package com.projects.fragments;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Build;
@@ -32,7 +31,6 @@ import com.db.Queries;
 import com.libraries.adapters.MGRecyclerAdapter;
 import com.libraries.asynctask.MGAsyncTaskNoDialog;
 import com.libraries.dataparser.DataParser;
-import com.libraries.location.MGLocationManager;
 import com.libraries.location.MGLocationManagerUtils;
 import com.libraries.slider.MGSlider;
 import com.libraries.slider.MGSlider.OnMGSliderListener;
@@ -46,8 +44,8 @@ import com.models.Photo;
 import com.models.Restaurant;
 import com.projects.activities.DetailActivity;
 import com.projects.activities.RestaurantActivity;
-import com.projects.restaurantfinder.MainActivity;
-import com.projects.restaurantfinder.R;
+import com.projects.patteo.MainActivity;
+import com.projects.patteo.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -197,8 +195,10 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                         });
                     }
                     categories = q.getCategories();
-                    Log.i("", categories.toString());
                 }
+
+                String aux = null;
+                //com.models.Category@8caba36
 
                 createSlider();
                 showList();
@@ -248,7 +248,6 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                                 UserAccessSession.getInstance(getActivity()).setFilterDistance(data.getDefault_distance());
                             }
                         }
-
                         if (data.getRestaurants() != null && data.getRestaurants().size() > 0) {
                             q.deleteTable("restaurants");
                             for(Restaurant restaurant : data.getRestaurants()) {
@@ -270,7 +269,12 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                             for(Category category : data.getCategories()) {
                                 q.deleteCategory(category.getCategory_id());
                                 q.insertCategory(category);
-                                categories.add(category);
+
+                                if (category.getCategory().equalsIgnoreCase("PATTEO")){
+
+                                } else {
+                                    categories.add(category);
+                                }
                             }
                         }
 
@@ -299,7 +303,6 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
     }
 
     private void showList() {
-        categories.remove(0);
         MGRecyclerAdapter adapter = new MGRecyclerAdapter(categories.size(), R.layout.category_entry);
         adapter.setOnMGRecyclerAdapterListener(new MGRecyclerAdapter.OnMGRecyclerAdapterListener() {
 
