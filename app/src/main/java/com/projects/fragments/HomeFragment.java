@@ -197,8 +197,10 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                         });
                     }
                     categories = q.getCategories();
-                    Log.i("", categories.toString());
                 }
+
+                String aux = null;
+                //com.models.Category@8caba36
 
                 createSlider();
                 showList();
@@ -248,7 +250,6 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                                 UserAccessSession.getInstance(getActivity()).setFilterDistance(data.getDefault_distance());
                             }
                         }
-
                         if (data.getRestaurants() != null && data.getRestaurants().size() > 0) {
                             q.deleteTable("restaurants");
                             for(Restaurant restaurant : data.getRestaurants()) {
@@ -270,7 +271,13 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                             for(Category category : data.getCategories()) {
                                 q.deleteCategory(category.getCategory_id());
                                 q.insertCategory(category);
-                                categories.add(category);
+                                Log.i("","KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
+                                Log.i("", category.getCategory());
+                                if (category.getCategory().equalsIgnoreCase("PATTEO")){
+
+                                } else {
+                                    categories.add(category);
+                                }
                             }
                         }
 
@@ -299,7 +306,6 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
     }
 
     private void showList() {
-        categories.remove(0);
         MGRecyclerAdapter adapter = new MGRecyclerAdapter(categories.size(), R.layout.category_entry);
         adapter.setOnMGRecyclerAdapterListener(new MGRecyclerAdapter.OnMGRecyclerAdapterListener() {
 

@@ -182,12 +182,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
         q.deleteFavorite(fave.favorite_id);
     }
 
-    /*@Override
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // toggle nav drawer on selecting action bar app icon/title
         // Handle action bar actions click
         switch (item.getItemId()) {
-            case R.id.addFave:
+            /*case R.id.addFave:
                 Restaurant resFave = q.getFavoriteRestaurantsByRestaurantId(restaurant.getRestaurant_id());
                 if (resFave == null) {
                     addToFavorites();
@@ -195,12 +195,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                     deleteFavorite();
                 }
                 checkFavoriteState();
-                return true;
+                return true;*/
             default:
                 finish();
                 return super.onOptionsItemSelected(item);
         }
-    }*/
+    }
 
     /*@Override
     public boolean onCreateOptionsMenu(android.view.Menu menu) {

@@ -185,9 +185,8 @@ public class CategoryFragment extends Fragment {
     }
 
     private void showList() {
-        categories.remove(5);
+        //categories.remove(5);
         MGRecyclerAdapter adapter = new MGRecyclerAdapter(categories.size(), R.layout.category_entry);
-        Log.i("CATE", categories.toString());
         adapter.setOnMGRecyclerAdapterListener(new MGRecyclerAdapter.OnMGRecyclerAdapterListener() {
 
             @Override
