@@ -175,7 +175,7 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
             public void onAsyncTaskPostExecute(MGAsyncTaskNoDialog asyncTask) {
                 // TODO Auto-generated method stub
                 if(!MGUtilities.hasConnection(getActivity())) {
-                    restaurants = q.getFeaturedRestaurants();
+                    restaurants = q.getRestaurants();
                     if (MainApplication.currentLocation != null) {
                         for (Restaurant restaurant : restaurants) {
                             Location locStore = new Location("Store");
