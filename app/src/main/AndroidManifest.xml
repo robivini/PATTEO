@@ -55,7 +55,6 @@
         <activity android:name="com.projects.activities.ImageViewerActivity" android:label="@string/app_name"/>
         <activity android:name="com.projects.activities.RestaurantActivity" android:label="@string/app_name"/>
         <activity android:name="com.projects.activities.SettingsActivity" android:label="@string/app_name"/>
-        <activity android:name="com.projects.fragments.AnuncioFragment" android:label="Anúncie!"/>
     </application>
 
 </manifest>
