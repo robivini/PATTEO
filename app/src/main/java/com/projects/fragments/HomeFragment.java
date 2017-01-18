@@ -58,6 +58,7 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
     private View viewInflate;
     ArrayList<Restaurant> restaurants;
     ArrayList<Category> categories;
+    ArrayList<Category> aux;
     MGAsyncTaskNoDialog task;
     Queries q;
     SwipeRefreshLayout swipeRefresh;
@@ -94,6 +95,7 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
 
         restaurants = new ArrayList<Restaurant>();
         categories = new ArrayList<Category>();
+        aux = new ArrayList<Category>();
 
         slider = (MGSlider) viewInflate.findViewById(R.id.slider);
         q = MainApplication.getQueriesInstance(getContext());
@@ -176,6 +178,7 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                 // TODO Auto-generated method stub
                 if(!MGUtilities.hasConnection(getActivity())) {
                     restaurants = q.getRestaurants();
+                    Log.i("*********", categories.toString());
                     if (MainApplication.currentLocation != null) {
                         for (Restaurant restaurant : restaurants) {
                             Location locStore = new Location("Store");
@@ -196,8 +199,8 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
                             }
                         });
                     }
+
                     categories = q.getCategories();
-                    Log.i("", categories.toString());
                 }
 
                 createSlider();
@@ -299,7 +302,9 @@ public class HomeFragment extends Fragment implements MainApplication.OnLocation
     }
 
     private void showList() {
+        aux.add(categories.get(0));
         categories.remove(0);
+        categories.add(aux.get(0));
         MGRecyclerAdapter adapter = new MGRecyclerAdapter(categories.size(), R.layout.category_entry);
         adapter.setOnMGRecyclerAdapterListener(new MGRecyclerAdapter.OnMGRecyclerAdapterListener() {
 

@@ -36,6 +36,7 @@ public class CategoryFragment extends Fragment {
 
     private View viewInflate;
     ArrayList<Category> categories;
+    ArrayList<Category> aux;
     MGAsyncTaskNoDialog task;
     Queries q;
     SwipeRefreshLayout swipeRefresh;
@@ -71,6 +72,7 @@ public class CategoryFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         categories = new ArrayList<Category>();
+        aux = new ArrayList<Category>();
         q = MainApplication.getQueriesInstance(getContext());
 
         mRecyclerView = (RecyclerView) viewInflate.findViewById(R.id.recyclerView);
@@ -170,7 +172,9 @@ public class CategoryFragment extends Fragment {
     }
 
     private void showList() {
-        //categories.remove(5);
+        aux.add(categories.get(0));
+        categories.remove(0);
+        categories.add(aux.get(0));
         MGRecyclerAdapter adapter = new MGRecyclerAdapter(categories.size(), R.layout.category_entry);
         adapter.setOnMGRecyclerAdapterListener(new MGRecyclerAdapter.OnMGRecyclerAdapterListener() {
 
